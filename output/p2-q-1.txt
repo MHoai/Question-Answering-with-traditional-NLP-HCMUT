@@ -1,0 +1,7 @@
+Có tổng cộng 6 tour 
+tour đi từ HCMC đến PQ khởi hành lúc "7AM 1/7"
+tour đi từ HCMC đến PQ khởi hành lúc "8AM 5/7"
+tour đi từ HCMC đến DN khởi hành lúc "7AM 1/7"
+tour đi từ HCMC đến DN khởi hành lúc "7AM 4/7"
+tour đi từ HCMC đến NT khởi hành lúc "7AM 1/7"
+tour đi từ HCMC đến NT khởi hành lúc "7AM 5/7"

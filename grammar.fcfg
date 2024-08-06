@@ -1,0 +1,53 @@
+% start S
+S -> NP VP
+S[SEM=<(WHQUERY(?vp(?varnp), ?qtail(?g)))>, VAR=?varvp] -> NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp, GAP=?g] YNQTAIL[SEM=?qtail, VAR=?varqt]
+S[SEM=<(WHQUERY(?vp2(?s1), ?qtail(?g)))>, VAR=?varv2] -> S/?x[SEM=?s1, VAR=?vars1] VP/?x[SEM=?vp2, VAR=?varv2, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+S/?x[SEM=<?vp(?varnp)>, VAR=?varvp] -> NP/?x[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp]
+S[SEM=<(WHQUERY(?vp(?varnp), ?qhead(hm1)))>, VAR=?varvp] -> QHEAD[SEM=?qhead, VAR=?varqh] NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp] QTAIL
+S[SEM=<WHQUERY(?vp(?varnp), ?qtail(?g))>, VAR=?varvp] -> NP[SEM=?np, VAR=?varnp] VP[SEM=?vp, VAR=?varvp, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+S[SEM=<(WHQUERY(?vp2(?s1), ?qtail(?g)))>, VAR=?varv2] -> S/?x[SEM=?s1, VAR=?vars1] VP[SEM=?vp2, VAR=?varv2, GAP=?g] QTAIL[SEM=?qtail, VAR=?varqt]
+
+NP[SEM=?n, VAR=?var, GAP = ?var] -> DET[NUM = ?num] N[SEM=?n, VAR=?var]
+NP[SEM=?n2, VAR=?v2] -> N[+TOUR] N[-TOUR, SEM=?n2, VAR=?v2]
+DET[NUM = pl] -> 'tất' 'cả' 'các' | 'những'
+DET[NUM = sg] -> 'một' 'vài' |
+N[-TOUR, SEM=<'em'>, VAR=<em1>] -> 'em'
+N[-TOUR] -> 'bạn'
+N[-TOUR, SEM=<PhuongTien>,VAR=<pt1>] -> 'phương' 'tiện'
+N[-TOUR, SEM=<Ngay>,VAR=<date1>] -> 'ngày' 
+N[+TOUR, SEM=<'tour'>, VAR=<tour1>] -> 'tour'
+N[SEM=<'HoChiMinh'>,VAR=<HCM>] -> 'Hồ' 'Chí' 'Minh'
+N[SEM=<'NhaTrang'>,VAR=<NT>] -> 'Nha' 'Trang'
+N[SEM=<'DaNang'>,VAR=<DN>] -> 'Đà' 'Nẵng'
+N[SEM=<'PhuQuoc'>,VAR=<PQ>] -> 'Phú' 'Quốc'
+N -> 'tôi' | 'con' | 'cơm' | 'sáng' 'sớm' | 'anh' 'ấy' | 'cô' 'ấy' | 'chơi' | 'Dũng' | 'cờ' | 'Quân' | 'sách'
+
+VP[SEM=<\n.?v(n, ?pp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] PP[SEM=?pp, GAP=?g]
+VP[SEM=<\n.?v(n, ?varnp)>, VAR=?varv, GAP=?g] -> V[SEM=?v, VAR=?varv] NP[SEM=?np, VAR=?varnp, GAP=?g]
+VP/?x[SEM=<\n.?vp(n, ?varnp)>, VAR=?varvp, GAP=?g] -> V[SEM=?vp, VAR=?varvp] NP/?x[SEM=?np, VAR=?varnp, GAP=?g]
+NP/NP[SEM=<GAP>, VAR=<n1>, GAP=<n1>] ->
+V[-AUX, SEM=?v, VAR=?var] -> V[+AUX] V[-AUX, SEM=?v, VAR=?var]
+
+V[-AUX, SEM=<\n p.REMIND(n, p)>, VAR=<remind1>] -> 'nhắc' 'lại'
+V[-AUX, SEM=<\n p.CONSUME(n, p)>, VAR=<consume1>] -> 'hết'
+V[-AUX, SEM=<\n p.HAVE(n, p)>, VAR=<have1>] -> 'có'
+V[-AUX, SEM=<\n p.GO(n, p)>, VAR=<go1>] -> 'đi'
+V[+AUX] -> 'có' 'thể'
+V -> 'ăn' | 'học' 'bài' | 'đánh' | 'đọc'
+
+PP[SEM=?pp] -> P NP PP[SEM=?pp]
+PP[SEM=<?p(?varnp)>, GAP=?g] -> P[SEM=?p] NP[SEM=?np, VAR=?varnp, GAP=?g]
+P -> 'từ'
+P -> 'lúc'
+P[SEM=<\x .TO_LOC(x)>] -> 'tới'
+P[SEM=<\x .BY_VEHICLE(x)>] -> 'bằng'
+
+QHEAD[SEM=<\x.WH(x, HOWMANY)>, VAR=<HM>]   -> 'có' 'bao' 'nhiêu'
+YNQTAIL[SEM=<\x.WH(x, YESNO)>, VAR=<YS>]  -> 'được' 'không'
+QTAIL[SEM=<\x.WH(x, HOWLONG)>, VAR=<HL>]   -> 'bao' 'lâu'
+QTAIL   -> 'vậy' 'bạn'
+
+QTAIL[SEM=<\x.WH(x, WHAT)>, VAR=<WT>]   -> 'gì' 'vậy'
+QTAIL[SEM=<\x.WH(x, HOWMANY)>, VAR=<HM>]   -> 'nào' 'nhỉ'
+
+

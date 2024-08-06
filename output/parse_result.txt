@@ -1,0 +1,36 @@
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] tôi))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] ăn)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] anh ấy))
+  (VP[GAP=?g, SEM=<\n.?v(n,?p2(?g))>, VAR=?varv]
+    (V[] học bài)
+    (PP[GAP=?varnp, SEM=<?p(?varnp)>]
+      (P[] lúc)
+      (NP[GAP=?var, SEM=?n, VAR=?var]
+        (DET[NUM='sg'] )
+        (N[] sáng sớm)))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cô ấy))
+  (VP[GAP=?varnp, SEM=<\n.GO(n,?varnp)>, VAR=<go1>]
+    (V[-AUX, SEM=<\n p.GO(n,p)>, VAR=<go1>] đi)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] chơi))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Dũng))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] đánh)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cờ))))
+(S[]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Quân))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] đọc)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] sách))))
+(S[SEM=<WHQUERY(?v2(?varnp,?g),WH(?g,YESNO))>, VAR=?varvp]
+  (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] Quân))
+  (VP[GAP=?varnp, SEM=<\n.?v(n,?varnp)>, VAR=?varv]
+    (V[] ăn)
+    (NP[GAP=?var, SEM=?n, VAR=?var] (DET[NUM='sg'] ) (N[] cơm)))
+  (YNQTAIL[SEM=<\x.WH(x,YESNO)>, VAR=<YS>] được không))
+[]
